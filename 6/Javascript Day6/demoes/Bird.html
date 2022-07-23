@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+             .flip
+            {
+                transform:rotateY(180deg)
+            }
+            img{
+                width:200px;height: 200px;
+                position: absolute;
+            }
+        </style>
+    </head>
+<body>
+    <img src="images/bird.gif"/>
+ 
+    <script>
+        let birdObject=document.images[0];
+        let left=0;
+        function moveRight()
+        {
+            let timerID=setInterval(()=>{
+                left+=10;
+                if(left<window.innerWidth-birdObject.width)
+                birdObject.style.left=left+"px";
+                else
+                {
+                    birdObject.classList.add("flip");
+                    clearInterval(timerID);
+                    moveLeft();
+                }
+            },50)
+        }
+        moveRight();
+
+        function moveLeft()
+        {
+           let timerID= setInterval(()=>{
+            left-=10;
+            if(left>0)
+            birdObject.style.left=left+"px";
+            else
+
+            {
+                birdObject.classList.remove("flip");
+
+                clearInterval(timerID);
+                moveRight();
+            }
+
+           },50)
+            
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+        /*******************************************
+                apply, call and bind
+        **********/    
+            // let product={
+            //     id:1,
+            //     name:"fruit",
+            //     getData(supplier,shipper){ console.log("product",this.id,this.name,supplier,shipper)}
+            // };
+
+            // let food={
+            //     id:3,
+            //     name:"beens",
+            //     color:"red",
+            //     sell(){console.log("sell "+this.color);}
+            // }
+
+
+
+            // // food.getData=product.getData; //function(){}
+            // // food.getData("Com1","COM2");
+            // //remove 
+            // //call 
+            // // product.getData.call(food);
+            // // product.getData.call(food,"COM1","COM2");
+            // // product.getData.apply(food,["COM1","COM2"]);
+
+            // // let numbers=[2,1,50,4,5];
+            // // Math.max(...numbers);
+            // // Math.max.apply(null,numbers);
+            // // Math.max.call(null,...numbers);
+
+            // //bind 
+
+            // let getData=product.getData.bind(food);//,"test1","test2");//function(){this.id,this.name}
+            // // getData("COM!","COM2");
+            // // getData("COM!","COM2");
+
+
+
+
+            // //ES5-------
+            // function Person(id,name)
+            // {
+            //     this.id=id;
+            //     this.name=name;
+            //     this.getData=function(){console.log(id,this.name);}
+            //     // this.getId=function(){return id;;}
+            //     Person.COUNT++;
+            // }
+            // Person.COUNT=0;
+
+            // let person1=new Person(2,"ahmed");
+            // let person2=new Person(4,"Menna");
+
+
+            // //prototype
+
+            // // Person.prototype
+            // //person1.__proto__
+            // //Person.prototype==person1.__proto__
+
+            // //prototype --> class
+            // //1- add functions on run ttime shared between objects
+
+            // Person.prototype.canSleep=function(){
+            //     console.log("I Can Sleep", this.name);
+            // }
+
+            // Person.prototype.getID=function(){return id;}
+
+            // //Static COUNT;
+            // Person.COUNT;
+
+
+
+
+            // //Inhiritance
+
+            // function ITIStudent(id,name,flag)
+            // {
+            //     Person.call(this,id,name);
+            //     this.hardWorker=flag;
+            // }
+
+            // //1-
+            // // ITIStudent.prototype=Person.prototype;
+            // ITIStudent.prototype=Object.create(Person.prototype,{});
+            // ITIStudent.prototype=new Person();
+
+            // //2-
+            // // ITIStudent.prototype.constructor=ITIStudent;
+            // // 3- call of Base Class inside child class
+
+            // // let itiStudent=new ITIStudent(33,"HI",false);
+
+
+
+            // let user={
+            //     id:1,
+            //     name:"eman"
+            // }
+
+            // // // let perimumUser={...user,ads:false}
+            // // let perimumUser={
+            // //     __proto__:user,
+            // //     ads:false
+            // // }
+
+            //     let product={
+            //     id:1,
+            //     name:"fruit",
+            //     getData(supplier,shipper){ console.log("product",this.id,this.name,supplier,shipper)}
+            // };
+
+            // Object.defineProperty(product,"category",{
+            //     value:"FRUITS",
+            //     enumerable:false,
+            //     configurable:false
+            // })
+
+            // for(key in product)
+            // console.log(key);
+
+
+        /***************************************
+         *              ES6 Classes
+         * */         
+        class Person
+        {
+            #id;
+            static #count=0
+            constructor(id,name)
+            {
+                if(new.target.name=="Person")
+                throw new Error("This is Abstract Calss");
+                this.#id=id;
+                this.name=name;
+                Person.#count++;
+            }
+
+            static getCount(){return Person.#count;}
+
+        }
+        // let person=new Person(1,"eman");
+
+        class Student extends Person
+        {   
+            constructor(id,name,department)
+            {
+                super(id,name);
+                this.department=department;
+
+               
+            }
+
+        }
+        let student=new Student(2,"ayman","SD");
+
+
+
+
+
+            //JSON JS Object Notation
+            studentJSON=JSON.stringify(student);
+
+
+
+
+
+
+
+
+</script>
+    </body>
+</html>

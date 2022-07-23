@@ -1,0 +1,9 @@
+label{
+    background-color: rgb(255, 161, 161);
+    color: rgb(27, 1, 255);
+    font-weight: bold;
+}
+span{
+    color: red;
+    visibility: visible;
+}

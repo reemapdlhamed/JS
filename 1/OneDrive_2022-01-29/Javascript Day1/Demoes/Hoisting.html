@@ -1,0 +1,106 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- script number 1 -->
+        <script>
+                    //call avariable with var from upcoming script
+                         
+                    //call a variable without var from upcomming script
+               
+                    // console.log(number);
+
+        </script>
+
+        <!-- script number2 -->
+        <script>
+            // var  umber, myName,courseName;
+             console.log(number);
+
+            var number=33;   
+            var myName="eman";
+
+            myName[0]="x";
+            // myName="Ali";
+
+            var result="";
+            for(var i=0;i<myName.length;i++)
+            {
+                  // if(i==0)
+                if(myName[i]=="e")
+                {
+                    result+="x";
+                    result=result+"x";  //result="x"
+                }
+                else
+                result=result+myName[i];//result="xm"+"a"
+
+              
+            }
+            console.log(result);
+
+
+                /************************
+                 * ES6 variables declarations (hoisting problem with var)
+                 * 
+                 * */
+                // console.log(courseName);//undefined
+                
+                // console.log(courseName);
+                
+                // console.log(courseHours); //error
+                
+                courseHours=50; // forbidden  //not hoisted
+                // console.log(courseHours);
+                //problem of block scoping         
+                // var cousreName="ESNext";
+                /************************
+                 * ES6 variables declarations
+                 * */
+                //let and const
+
+                //hoisting
+                // console.log(courseNameVer2);//Cannot access 'courseNameVer2' before initialization
+                let courseNameVer2="ES 6";
+                // let numebrFloat;//undefined
+                let numberFloat=90;
+                
+                // const size; //Missing initializer in const declaration
+                // const size=3;
+                // size=90;    
+                // const size=33;// Assignment to constant variable.
+                if(true)
+                {
+                    // console.log(numberFloat);//2 //Cannot access 'numberFloat' before initialization
+
+                    let numberFloat=2; //block definition
+                    // console.log(numberFloat);//2
+
+                }
+                // console.log(numberFloat);//90
+
+                
+
+                // for(let i=0;i<2;i++)
+                // {
+                //     console.log(i);
+                // }
+
+                // console.log(numberFloat);
+
+
+        </script>
+
+        <!-- script number3-->
+        <script>
+                //call avariable with var from previous script
+                // console.log(courseName);
+                
+                //call avariable without var from previous script
+                // console.log(courseHours);
+                 
+            
+        </script>
+    </body>
+</html>

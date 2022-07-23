@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+  
+<style>
+        body {
+            margin: 70px 300px;
+            font-family: Andalus;
+            font-size:x-large;
+            font-weight:bold;
+			background-color:lightGrey;
+        }
+        [type=text],[type=button]
+        {
+            font-family:'Century Gothic';
+            font-size:large;
+        }
+
+        table {
+            width: 400px;
+        
+        }
+        span{ color:red; font-size: 20px; visibility: hidden;}
+        .SD {
+            background-color: lightpink;
+        }
+
+        .OS {
+            background-color: lightyellow;
+        }
+
+        .EL {
+            background-color: lightskyblue;
+        }
+    </style>
+
+         
+    
+</head>
+<body>
+ 
+    <form>
+        <table>
+            <tr>
+                <td colspan="2">
+                    Department:
+                    <input type="radio" name="Department" value="SD" checked="checked" />SD
+                    <input type="radio" name="Department" value="OS" />OS
+                    <input type="radio" name="Department" value="EL" />EL
+                </td>
+            </tr>
+            <tr><td>StudentName<input type="text" name="studentName" value="Eman" /></td><td ><span style="font-size: 15px;" id="nameError">Required string</span></td><td><span id="namedouplecated">already existed</span></td></tr>
+            <tr><td>StudentGrade<input type="text" name="studentGrade" value="50" /></td><td><span style="font-size: 15px;" id="gardeError">Required number 0:100</span></td></tr>
+            
+			<tr><td><input type="button"  value="Add" /></td></tr>
+            <tr>
+                <td colspan="2">
+                    Sort:
+                    <select id="sort">
+                        <option value="all">select your option</option>
+                        <option value="name">by name</option>
+                        <option value="grade">by grades`</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2">
+                    Filter:
+                    <select id="filter">
+                        <option value="all">All</option>
+                        <option value="success">Success</option>
+                        <option value="fail">Fail`</option>
+                    </select>
+                </td>
+            </tr>
+            
+        </table>
+        </form>
+           
+             
+            
+<script src="students.js">
+
+</script>
+
+</body>
+</html>

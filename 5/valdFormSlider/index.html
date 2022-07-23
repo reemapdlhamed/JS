@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+
+    <form name="myform">
+    <fieldset>
+        <legend>validation form</legend>
+        <label> Name </label>
+        <input  type="text" value=""  name="userName" />
+        <span class="nameClass" style="visibility: hidden;">*required only string</span>
+    </br>
+    <label> Age  :  </label>
+        <input type="text"  name="userAge"/><span class="ageClass" style="visibility: hidden;">*accept only numbers from 20:40</span>
+    </br>
+        <label> Grade</label>
+        <input  type="text" name="userGrade"/><span class="gradesClass" style="visibility: hidden;">*accept only numbers from 0:100</span>
+    </br>
+
+    <input type="submit" value="register"/>
+</fieldset>
+    </form>
+<br>
+<br>
+
+<div>
+ <button class="testOnclick"  onclick="nextSlide()">next</button>
+ <button onclick="previousSlide()">previous</button>   
+ <button onclick="startSlide()">slide show</button>
+ <button onclick="stopSlide()">stop</button>
+ <br>
+ <br>
+ <img id="slideImage" src="images/1.jpg" width="300" height="300" alt="slideImage">
+</div>
+
+
+
+
+    <script src="functionScript.js"></script>
+</body>
+</html>
+
